@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapist.Wiki - members</title>
+  <meta name="description" content="Rapist.wiki">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="imgs/fa.png" type="image/png" />
+  <link rel="stylesheet" type="text/css" href="css/members.css">
+  <link rel="stylesheet" type="text/css" href="css/minecraftia">
+</head>
+<body>
+<span class="Header">Rapist.wiki</span>
+
+
+<div class="music-button" onclick="toggleAudio()">
+  <img id="musicIcon" src="imgs/A5UD8z7y.png">
+</div>
+
+
+<div class="card" style="border: #2F2F2F 1px solid;">
+  <img class="pfp" src="imgs/fafafa.gif" />
+  <div class="name-text">Yorie</div>
+  <div class="social-icons">
+    <a href="discord://-/users/1196612898668167209" class="icon">
+      <img src="imgs/xxNdMnth.png" />
+    </a>
+    <a href="https://yorie.xyz" target="_blank" class="icon">
+      <img src="imgs/eZPMz84q.png" />
+    </a>
+    <a href="https://steamcommunity.com/id/untrustyy/" target="_blank" class="icon">
+      <img src="imgs/steam.png" />
+    </a>
+  </div>
+</div>
+
+<div class="card" style="border: #2F2F2F 1px solid;">
+  <img class="pfp" src="imgs/saburu.png" />
+  <div class="name-text">Ripisrot</div>
+  <div class="social-icons">
+    <a href="discord://-/users/1296496335440314472" class="icon">
+      <img src="imgs/xxNdMnth.png" />
+    </a>
+    <a href="https://musicmademedia.xyz/" target="_blank" class="icon">
+      <img src="imgs/eZPMz84q.png" />
+    </a>
+  </div>
+</div>
+
+<div class="card" style="border: #2F2F2F 1px solid;">
+  <img class="pfp" src="imgs/xoru.png" />
+  <div class="name-text">Xoru</div>
+  <div class="social-icons">
+    <a href="discord://-/users/1177497949601812512" class="icon">
+      <img src="imgs/xxNdMnth.png" />
+    </a>
+    <a href="https://loki.lol" target="_blank" class="icon">
+      <img src="imgs/eZPMz84q.png" />
+    </a>
+  </div>
+</div>
+
+<div class="card" style="border: #2F2F2F 1px solid;">
+  <img class="pfp" src="imgs/skipp.png" />
+  <div class="name-text">Skippin</div>
+  <div class="social-icons">
+    <a href="discord://-/users/1177497949601812512" class="icon">
+      <img src="imgs/xxNdMnth.png" />
+    </a>
+    <a href="https://skip.bar/" target="_blank" class="icon">
+      <img src="imgs/eZPMz84q.png" />
+    </a>
+  </div>
+</div>
+
+<script src="js/snowfall.js"></script>
+<script src="js/protect.js"></script>
+
+<!-- Audio element -->
+<audio id="audio" src="https://files.offshore.cat/5mJrYLXx.mp3" loop></audio>
+
+<script>
+  const audio = document.getElementById('audio');
+  const icon = document.getElementById('musicIcon');
+  let isPlaying = false;
+
+  function toggleAudio() {
+    if (isPlaying) {
+      icon.classList.add('hidden');
+      setTimeout(() => {
+        icon.src = 'imgs/A5UD8z7y.png';
+        icon.classList.remove('hidden');
+      }, 300);
+      audio.pause();
+    } else {
+      icon.classList.add('hidden');
+      setTimeout(() => {
+        icon.src = 'index/img/volume.png';
+        icon.classList.remove('hidden');
+      }, 300);
+      audio.play().catch((error) => {
+        console.error('Playback failed:', error);
+      });
+    }
+    isPlaying = !isPlaying;
+  }
+</script>
+</body>
+</html>
